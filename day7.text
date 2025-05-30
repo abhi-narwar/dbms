@@ -1,0 +1,62 @@
+❓ What is Normalization?
+🩵 Answer:
+Normalization is a process in DBMS to make the database clean and consistent by:
+
+Removing duplicate (repeated) data
+
+Making sure data is correct using lossless decomposition
+
+
+❓ What are Normal Forms?
+🩵 Answer:
+Normal Forms are the steps or levels of normalization. Each level reduces more problems.
+
+
+ What is First Normal Form (1NF)?
+🩵 Answer:
+A table is in 1NF if:
+
+Every column has only one value (called atomic value).
+
+No columns have multiple values or sets.
+
+✅ Example:
+Wrong: Subjects = {Math, English}
+Correct: Subjects = Math (in a separate row) and Subjects = English (another row)
+
+
+❓ What is Second Normal Form (2NF)?
+🩵 Answer:
+A table is in 2NF if:
+
+It is already in 1NF
+
+There is no partial dependency (non-prime attribute depends on only a part of the primary key)
+
+📝 Partial Dependency: When only part of a composite key determines a non-key attribute
+
+
+❓ What is Third Normal Form (3NF)?
+🩵 Answer:
+A table is in 3NF if:
+
+It is already in 2NF
+
+There is no transitive dependency (non-key depends on another non-key)
+
+📝 Transitive Dependency: A → B → C
+If A determines B and B determines C, then A indirectly determines C, which is not allowed in 3NF for non-prime attributes.
+
+
+
+
+
+❓ What is Boyce-Codd Normal Form (BCNF)?
+🩵 Answer:
+A table is in BCNF if:
+
+It is already in 3NF
+
+For every functional dependency A → B, A must be a super key.
+
+✅ BCNF is a stronger version of 3NF.
