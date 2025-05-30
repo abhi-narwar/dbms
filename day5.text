@@ -1,0 +1,40 @@
+❓ What is a Key?
+Answer:
+A key is a set of attributes that uniquely identify each row (tuple) in a table
+
+❓ What is a Super Key?
+Answer:
+A super key is any set of attributes that can uniquely identify a tuple. It can have extra attributes too.
+
+
+
+❓ What is a Candidate Key?
+Answer:
+A candidate key is a minimal super key — it has no extra attributes but still uniquely identifies tuples.
+
+
+❓ What is a Primary Key?
+Answer:
+A primary key is a candidate key chosen by the designer. It is unique and cannot be null.
+
+
+❓ What is an Alternate Key?
+Answer:
+Alternate keys are candidate keys that are not chosen as the primary key.
+
+
+
+❓ What is a Foreign Key?
+Answer:
+A foreign key is an attribute that refers to the primary key in another table, creating a link between tables.
+
+❓ What is a Composite Key?
+Answer:
+A composite key is a primary key made of two or more attributes together.
+
+
+
+❓ What is a Unique Key?
+Answer:
+A unique key ensures all values in a column are unique. It can be null and its value cannot be changed once assigned.
+
