@@ -1,0 +1,30 @@
+❓ What are Constraints in DBMS?
+Answer:
+Constraints are rules applied on data to keep it correct and consistent in the database.
+
+❓ What is Domain Constraint?
+Answer:
+It limits the values an attribute can have. The value must be from a specific set (domain).
+
+
+❓ What is Tuple Uniqueness Constraint?
+Answer:
+Every row (tuple) in a table must be unique; no duplicates allowed.
+
+
+❓ What is Key Constraint?
+Answer:
+Primary key values must be unique and cannot be null.
+
+❓ What is Entity Integrity Constraint?
+Answer:
+No part of the primary key can be null.
+
+❓ What is Referential Integrity Constraint?
+Answer:
+Foreign key values must either match primary key values in another table or be null.
+
+
+❓ What is Closure of an Attribute Set?
+Answer:
+Closure of an attribute set is all the attributes that can be determined from that attribute set using functional dependencies.
