@@ -1,0 +1,25 @@
+✅ What is a Database?
+A database is a collection of related data that represents a real-world situation.
+It helps store and organize data properly.
+
+✅ What is DBMS?
+DBMS (Database Management System) is software that stores, manages, and retrieves data.
+It provides security and makes data access easy.
+
+✅ Why do we need DBMS (Problems in File System)?
+Data redundancy – Same data stored multiple times
+Inconsistency – Data not same in all places
+Difficult access – Hard to search data
+Data isolation – Data stored in different formats
+Integrity problems – No rules checking
+Atomicity issues – Incomplete updates
+Concurrency issues – Multi-user access problem
+Security issues – Less control on data access
+
+
+
+✅ What is an ER Diagram?
+ER Diagram (Entity-Relationship Diagram) is a visual tool to design a database.
+It shows entities, their attributes, and relationships between them.
+
+
