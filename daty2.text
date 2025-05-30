@@ -1,0 +1,45 @@
+❓ What is an Entity Set?
+Answer:
+An entity set is a group of similar entities. For example, all students form a student entity set.
+
+❓ What is a Strong Entity Set?
+Answer:
+A strong entity set has enough attributes to identify each entity uniquely.
+It has a primary key (main identifier).
+In ER diagrams, the primary key is shown by underlining the attribute.
+
+❓ What is a Weak Entity Set?
+Answer:
+A weak entity set does not have enough attributes to identify entities uniquely.
+It has no primary key by itself.
+Instead, it uses a partial key called a discriminator to identify entities within the weak set.
+The discriminator is shown by underlining with a dashed line.
+
+❓ What is a Relationship?
+Answer:
+A relationship is a connection or association between two or more entities.
+
+❓ What is a Unary Relationship Set?
+Answer:
+Unary relationship involves only one entity set in the relationship.
+Example: An employee supervises another employee (same entity set).
+
+
+❓ What is a Binary Relationship Set?
+Answer:
+Binary relationship involves two different entity sets.
+Example: A student enrolls in a course (student and course are two entity sets).
+
+
+
+❓ What is a Ternary Relationship Set?
+Answer:
+Ternary relationship involves three entity sets participating together.
+Example: A doctor prescribes medicine to a patient at a hospital (doctor, patient, hospital).
+
+
+❓ What is an N-ary Relationship Set?
+Answer:
+N-ary relationship involves ‘n’ number of entity sets in a relationship.
+It is a general case for more than two or three entities.
+
