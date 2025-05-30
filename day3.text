@@ -1,0 +1,55 @@
+❓ What is Cardinality Constraint?
+Answer:
+Cardinality constraint tells how many entities from one set can be related to entities in another set.
+
+❓ What is One-to-One Cardinality?
+Answer:
+One entity from set A connects with at most one entity from set B, and vice versa.
+
+❓ What is One-to-Many Cardinality?
+Answer:
+One entity from set A can connect to many entities in set B, but one entity in set B connects to only one entity in set A.
+
+❓ What is Many-to-One Cardinality?
+Answer:
+One entity from set A connects to at most one entity in set B, but one entity in set B connects to many entities in set A.
+
+
+❓ What is Many-to-Many Cardinality?
+Answer:
+Many entities from set A can connect to many entities in set B, and vice versa.
+
+
+❓ What are Attributes?
+Answer:
+Attributes describe the properties of an entity in an entity set.
+
+❓ What are Simple Attributes?
+Answer:
+Simple attributes cannot be divided further.
+Example: Age.
+
+
+❓ What are Composite Attributes?
+Answer:
+Composite attributes are made of multiple simple attributes.
+Example: Name (First name + Last name), Address.
+
+❓ What are Multi-Valued Attributes?
+Answer:
+Multi-valued attributes can have multiple values for one entity.
+Example: Mobile numbers, Email IDs.
+
+
+❓ What are Derived Attributes?
+Answer:
+Derived attributes are calculated from other attributes.
+Example: Age can be derived from Date of Birth (DOB).
+
+
+
+❓ What are Key Attributes?
+Answer:
+Key attributes uniquely identify an entity.
+Example: Roll number.
+
