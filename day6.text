@@ -1,0 +1,45 @@
+❓ What is Functional Dependency?
+Answer:
+Functional dependency means if two rows have the same value for one attribute, they must also have the same value for another.
+For example, if Roll_No → Name, then same roll number will always give same name.
+
+❓ What is Trivial Functional Dependency?
+Answer:
+It’s called trivial when the right-hand side is already part of the left-hand side.
+Example: Roll_No, Name → Name.
+
+
+❓ What is Non-Trivial Functional Dependency?
+Answer:
+It’s non-trivial when the right-hand side has at least one attribute that’s not part of the left-hand side.
+Example: Roll_No → Name (here, Name is not in Roll_No).
+
+❓ What is Decomposition in DBMS?
+🩵 Answer:
+Decomposition means breaking one big table into two or more smaller tables.
+
+❓ Why do we use Decomposition?
+🩵 Answer:
+To remove problems like redundancy and anomalies, and to make the database design better.
+
+
+❓ What is Lossless Decomposition?
+🩵 Answer:
+It means no data is lost when we divide a table.
+If we join the smaller tables again, we get the original table back.
+
+
+❓ What is Dependency Preservation?
+🩵 Answer:
+It means all functional dependencies (rules) from the original table should still be true in the smaller tables.
+
+
+❓ What is Lossless Join Decomposition?
+🩵 Answer:
+If we join the smaller tables using a natural join and get back the original table, it is called lossless join.
+
+
+❓ What is Lossy Join Decomposition?
+🩵 Answer:
+If joining the smaller tables gives extra or wrong data and not the original table, then it is lossy join.
+
