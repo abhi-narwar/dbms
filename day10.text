@@ -1,0 +1,47 @@
+✅ Interview Answer: What is a Schedule in DBMS?
+A schedule is the order in which the operations (like read, write) of multiple transactions are executed.
+It decides how transactions run in a system — one by one or at the same time.
+
+
+🔹 1. Serial Schedule
+In a serial schedule, one transaction runs completely, and only then the next one starts.
+No mixing of operations.
+This schedule is always:
+
+Consistent (data remains correct)
+
+Recoverable (we can fix it after failure)
+
+Cascadeless (no side effects)
+
+Strict (safe even during crashes)
+
+📌 Example:
+First, Transaction T1 runs fully. After that, T2 runs.
+
+
+
+
+🔹 2. Non-Serial Schedule
+In a non-serial schedule, transactions run together, and their operations are mixed.
+This is done to save time and increase speed (concurrency).
+But this schedule may not always be:
+
+Consistent
+
+Recoverable
+
+Cascadeless
+
+Strict
+
+📌 Example:
+Some operations from T1, then some from T2, then again from T1 — all mixed.
+
+
+
+✅ Summary Line:
+So, schedules help manage how transactions run in a system, and serial schedules are always safe but slow, while non-serial ones are faster but need to be carefully managed.
+
+
+
