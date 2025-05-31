@@ -1,0 +1,51 @@
+✅ File Structures in DBMS (Indexing)
+Indexing is used to speed up data access. It reduces the time needed to find a record.
+
+🔹 1. Primary Index
+Built on the primary key of a file.
+
+The data file is ordered by the primary key.
+
+Index contains:
+
+Primary Key value
+
+Pointer to the block in the data file
+
+📘 Example:
+If data is sorted by Roll Number, the index will store:
+
+csharp
+Copy
+Edit
+[Roll No | Pointer]
+🧠 Formula:
+Average block accesses = log₂(Bi) + 1
+(Bi = number of index blocks)
+
+📌 Fastest access if searching by primary key.
+
+🔹 2. Clustering Index
+Built on a non-key field (not unique).
+
+The data file is physically ordered by this field.
+
+Multiple records can have the same clustering field value.
+
+📘 Example:
+Index on Department in an Employee file (many employees in same dept)
+
+🧠 One entry in the index → points to block containing all matching records.
+
+🔹 3. Secondary Index
+Built on any field (can be key or non-key).
+
+Does not require data to be sorted.
+
+Used when primary index already exists but access is needed on another field.
+
+📘 Example:
+If data is sorted by Roll No but we want fast access by Name, we use a secondary index.
+
+📌 More flexible but slower than primary index.
+
