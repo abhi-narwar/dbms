@@ -1,0 +1,118 @@
+✅ Interview Answer: Relational Algebra (RA)
+🔸 What is Relational Algebra?
+Relational Algebra is a procedural query language used in databases.
+It works on relations (tables) and gives relations as output.
+It has operators to filter, join, or modify tables.
+
+
+🔹 Basic Operators (Core)
+1. σ (Selection)
+Selects rows based on a condition.
+📌 Think: Filter rows like WHERE in SQL.
+
+📘 Example:
+σ(age > 25)(Students) → All students with age > 25
+
+
+
+2. ∏ (Projection)
+Selects only certain columns from a table.
+📌 Think: Pick columns like SELECT name, age
+
+📘 Example:
+∏(name, age)(Students) → Only name and age columns
+
+
+3. X (Cross Product)
+Combines every row of R1 with every row of R2
+📌 Returns m × n rows
+
+📘 Example:
+R1 has 2 rows, R2 has 3 → Result: 6 rows
+
+
+
+4. U (Union)
+Combines tuples from R1 and R2
+📌 No duplicates. Schema must be same.
+
+🟢 Max rows: m + n
+🟡 Min rows: max(m, n)
+
+
+
+5. − (Set Difference or Minus)
+Returns rows in R1 that are not in R2
+
+📘 Example:
+R1 − R2 → Only unique rows of R1 not present in R2
+
+
+6. ρ (Rename)
+Renames a relation or its attributes.
+
+📘 Example:
+ρ(Students ← S) → Rename relation S to Students
+
+
+
+
+🔹 Extended Operators (Joins & Advanced)
+7. ∩ (Intersection)
+Returns only common tuples in both R1 and R2
+📌 Rows that appear in both tables
+
+8. ⋈c (Conditional Join)
+Cross product + Selection condition
+
+📘 Example:
+R ⋈ (R.id = S.id)
+Combines only where R.id = S.id
+
+9. ⋈ (Equi Join)
+A Conditional Join with only = conditions
+
+📘 Example:
+Join where Dept.id = Employee.dept_id
+
+10. ⋈ (Natural Join)
+Joins on common attributes automatically
+Removes duplicate columns
+
+📌 If no common attribute → behaves like Cross Product
+
+11. ⟕ (Left Outer Join)
+Returns all rows of Left table (R)
+If no match in Right (S), fills NULL
+
+12. ⟖ (Right Outer Join)
+Returns all rows of Right table (S)
+If no match in Left (R), fills NULL
+
+13. ⟗ (Full Outer Join)
+Returns all rows from both tables
+Fills NULL where there is no match
+
+14. / (Division Operator)
+Used in “for all” type queries
+Returns those A-tuples that are related to all tuples in B
+
+📘 Rule:
+Attributes of B ⊂ Attributes of A
+Result = A - B
+
+📘 Example:
+A: (student, subject)
+B: (subject)
+A / B → All students who have taken all subjects in B
+
+✅ One-Line Summary for Viva/Interview:
+Relational Algebra is a way to write queries using operations like select (σ), project (∏), join (⋈), and more, that work on relations and return relations.
+
+
+
+
+
+
+
+
