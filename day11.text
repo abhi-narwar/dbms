@@ -1,0 +1,121 @@
+✅ Interview Answer: What is Serializability in DBMS?
+Sometimes, many transactions run together (non-serial schedule), and this can cause problems in the database.
+Serializability is a rule that helps us check:
+👉 “Is this non-serial schedule safe or not?”
+
+
+🔹 What is a Serializable Schedule?
+A non-serial schedule is called serializable if its result is the same as some serial schedule (where transactions run one by one).
+If the final result of both is the same, then the non-serial schedule is safe to use.
+
+
+🔹 Why Serializability is Important?
+It helps us keep the database consistent even when many transactions are happening at the same time.
+Serializable schedules are always:
+
+Consistent
+
+Recoverable
+
+Cascadeless
+
+Strict
+
+
+✅ Summary Line:
+So, serializability is used to check if a concurrent schedule is correct and gives the same result as some serial schedule. It helps keep the database safe and correct.
+
+
+
+✅ Interview Answer: Types of Serializability and Schedules
+🔹 1. Conflict Serializability
+A schedule is conflict serializable if we can convert it into a serial schedule by swapping non-conflicting operations.
+
+📌 Non-conflicting means:
+
+They work on different data items, or
+
+One is read-read (which is safe)
+
+🟢 Conflict serializable = Safe schedule
+
+
+
+
+
+🔹 2. View Serializability
+A schedule is view serializable if it gives the same final result as a serial schedule.
+Even if operations are different, if the effect is the same, it is view serializable.
+
+🟢 Harder to check than conflict serializability, but still safe.
+
+
+
+🔴 Non-Serializable Schedule
+If a non-serial schedule cannot be converted into a serial one, and its result is not the same, it is non-serializable.
+
+🔺 This may lead to inconsistency or wrong results in the database.
+
+
+
+✅ Interview Answer: Recoverability in Schedules
+🔴 Irrecoverable Schedule
+A schedule is irrecoverable if:
+
+One transaction reads uncommitted data from another (called dirty read)
+
+And commits before the first one commits
+
+📌 If the first transaction fails, then the second has already committed wrong data.
+❌ This is unsafe.
+
+
+
+🟡 Recoverable Schedule
+A schedule is recoverable if:
+
+A transaction reads uncommitted data (dirty read), but
+
+It waits to commit until the first transaction commits or aborts
+
+✅ This avoids committing wrong data, so it’s safe.
+
+
+
+
+🔹 Types of Recoverable Schedules:
+🔸 Cascading Schedule (Cascading Rollback)
+If one transaction fails, and many other transactions also fail because they read from it,
+then this is called a Cascading Schedule.
+
+❌ This wastes resources due to many rollbacks.
+
+🔸 Cascadeless Schedule
+In this schedule, a transaction can only read committed data.
+So even if one transaction fails, others are not affected.
+
+✅ Safer than cascading.
+
+🔸 Strict Schedule
+In this schedule:
+
+A transaction can’t read or write a data item until the previous transaction that wrote it has committed or aborted.
+
+✅ This is the safest type.
+✅ It avoids dirty reads and dirty writes.
+
+✅ Summary Lines (for closing the answer in interview):
+So, serializability ensures correctness of non-serial schedules.
+Conflict and View serializability help us check if schedules are safe.
+We also want schedules to be recoverable — best is strict schedule, which gives full safety.
+
+
+
+
+
+
+
+
+
+
+
