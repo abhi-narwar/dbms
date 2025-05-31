@@ -1,0 +1,31 @@
+✅ Interview Answer: What are ACID Properties?
+ACID properties are four important rules that every transaction should follow to keep the database safe and correct.
+ACID stands for Atomicity, Consistency, Isolation, and Durability.
+
+
+🔹 1. Atomicity
+This means all or nothing.
+A transaction should happen completely or not at all.
+If one step fails, the whole transaction is cancelled.
+Example: While transferring money, if debit happens but credit fails — that is not allowed. Both must happen or none.
+
+
+🔹 2. Consistency
+The database should always be correct before and after the transaction.
+It should follow all the rules (called constraints).
+Example: If a rule says balance cannot be negative, then after the transaction, that rule should still be true.
+
+
+🔹 3. Isolation
+Many transactions can happen at the same time, but they should not affect each other.
+The final result should be the same as if the transactions ran one by one.
+Example: If two people book the same train seat at the same time, only one should succeed.
+
+
+🔹 4. Durability
+After a transaction is completed, its result is saved permanently.
+Even if there is a power failure or system crash, the data should not be lost.
+It is stored safely in the database.
+
+✅ Summary (Optional Ending Line):
+So, ACID properties help in making sure that all transactions are safe, correct, and reliable in a database system.
