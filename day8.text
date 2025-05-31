@@ -1,0 +1,42 @@
+🔹 What is a Transaction?
+A transaction is a group of operations that work together as one unit.
+It is used to perform a task in a database.
+For example, if we transfer money from one account to another, we read the balance, subtract the amount, and update it — all these steps form one transaction.
+
+🔹 What are the operations in a transaction?
+There are two main operations:
+
+Read(A): This reads the value of A from the database and puts it in memory (buffer).
+
+Write(A): This writes the updated value of A from memory (buffer) back to the database.
+
+
+
+.
+
+🔹 What are the states of a transaction?
+1. Active State
+This is the first state.
+The transaction is working and executing instructions.
+Changes are stored in memory (not yet in database).
+
+2. Partially Committed
+The transaction has finished all instructions, but changes are still in memory.
+Not saved to database yet.
+
+3. Committed State
+All changes are saved to the database.
+Now the transaction is successful and completed.
+
+4. Failed State
+If any problem happens while executing, the transaction goes to failed state.
+It cannot continue.
+
+5. Aborted State
+After failure, we undo all changes (called rollback).
+Then it moves to aborted state. Nothing is saved.
+
+6. Terminated State
+This is the final state.
+After commit or abort, the transaction ends completely.
+
