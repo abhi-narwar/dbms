@@ -1,0 +1,66 @@
+B-Trees
+
+B-Trees are balanced tree data structures used in databases and file systems to maintain sorted data and allow searches, sequential access, insertions, and deletions in logarithmic time.
+
+Structure:
+
+Each node contains keys and pointers (data pointers).
+
+Each pointer points either to a child node (block) or to a record (actual data).
+
+Keys separate the ranges of keys in the child nodes.
+
+Properties of B-Trees:
+
+Order (P): The maximum number of children a node can have is P.
+
+Root node:
+
+Has at least 2 children (if it is not a leaf).
+
+Can have at most P children.
+
+Internal nodes:
+
+Have between ⌈P/2⌉ and P children.
+
+Number of keys = number of children - 1.
+
+Leaves:
+
+All leaves are at the same level (balanced tree).
+
+Store pointers to actual records.
+
+Keys in nodes:
+
+Keys are sorted in increasing order.
+
+For any node, keys separate its children such that all keys in the subtree pointed by the ith child are between keys[i-1] and keys[i].
+
+
+Order of Tree:
+
+Order means the maximum number of children a node can have.
+
+An internal node can have between ⌈P/2⌉ and P children.
+
+An internal node can have between ⌈P/2⌉ – 1 and P – 1 keys.
+
+B+ Trees:
+
+In B+ trees, leaf nodes and non-leaf nodes have different structures.
+
+The order of non-leaf nodes is higher than the order of leaf nodes.
+
+Searching is faster in B+ trees because non-leaf nodes don’t have record pointers.
+
+This makes the tree shorter (less depth).
+
+
+
+
+
+
+
+
